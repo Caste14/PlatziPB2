@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Peso en donde no hay tanta gravedad
+        </title>
+    </head>
+    <body>
+        <h1>
+            <strong>¡Tu peso en otro planeta!</strong>
+        </h1>
+        <p>
+            No pesás lo mismo en Marte o en Júpiter
+        </p>
+        <script>
+            var user = prompt("¿Cuánto pesas?");
+            var peso = parseInt(user);
+            var g_Tierra = 9.8;
+            var g_Marte = 3.7;
+            var g_Jupiter = 24.8;
+            var peso_final;
+            peso_final = peso * g_Marte / g_Tierra;
+            peso_final = peso_final.toFixed(3);
+            document.write("Tu peso en Marte es <strong>"+peso_final+" kg.</Strong>");
+        </script>
+    </body>
+</html>

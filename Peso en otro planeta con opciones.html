@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Peso en donde no hay tanta gravedad
+        </title>
+        <style>
+            body
+            {
+                background-color:beige;
+                color: darkgreen;
+                font-family: Helvetica;
+                font-size: x-large;
+            }
+            strong
+            {
+                background-color: chartreuse;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <strong>¡Tu peso en otro planeta!</strong>
+        </h1>
+        <p>
+            No pesás lo mismo en Marte o en Júpiter
+        </p>
+        <script>
+            var user = prompt("¿Cuánto pesas?");
+            var planeta = parseInt(prompt("Elige tu planeta.\n 1 es Marte, 2 es Júpiter."));
+            var peso = parseInt(user);
+            var g_Tierra = 9.8;
+            var g_Marte = 3.7;
+            var g_Jupiter = 24.8;
+            var peso_final;
+            if(planeta == 1)
+            { 
+                peso_final = peso * g_Marte / g_Tierra;
+                peso_final = peso_final.toFixed(3);
+                document.write("Tu peso en Marte es <strong>"+peso_final+" kg.</Strong>");
+                    
+            }
+            else if(planeta == 2)
+            {
+                peso_final = peso * g_Jupiter / g_Tierra;
+                peso_final = peso_final.toFixed(3);
+                document.write("Tu peso en Júpiter es <strong>"+peso_final+" kg.</Strong>");
+            }
+            else
+            { 
+                peso_final = document.write("No importa el planeta, lo que importa es que estás gordo. Elegí opción 1 o 2 solamente.");
+            }
+            
+            
+        </script>
+    </body>
+</html>
